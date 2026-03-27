@@ -90,8 +90,30 @@ public class CircularLinkedList<T> {
      * @return cantidad de saltos, o -1 si no existe
      */
     public int jumpsToValue(T value) {
-        throw new UnsupportedOperationException(
-                "TODO RETO: Implementar jumpsToValue(T value) en CircularLinkedList.");
+    	if (size == 0) {
+    	    return -1;
+    	}
+    	
+    	int jump = 0;
+    	
+    	if (tail == null) {
+    		return -1;
+    	}
+    	
+    	CircularNode <T> temp = current;
+    	
+    	for(int i = 0; i < size; i++) {
+    		if (isSameValue(temp.getValue(), value)) {
+    			return jump;
+    		}
+    		
+    		temp = temp.getNext();
+    		jump++;
+    		
+    		
+    	}
+    	return -1;
+    	
     }
 
     @Override
