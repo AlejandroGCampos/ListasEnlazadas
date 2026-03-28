@@ -19,14 +19,14 @@ public class Main {
         System.out.println();
 
         SimpleListExample.run();
-//        CircularListExample.run();
-//        DoublyListExample.run();
+        CircularListExample.run();
+        DoublyListExample.run();
 
         System.out.println();
         System.out.println("=== APLICACIONES REALES ===");
         TaskBacklogApp.run();
-//        RoundRobinPlaylistApp.run();
-//        UndoRedoEditorApp.run();
+        RoundRobinPlaylistApp.run();
+        UndoRedoEditorApp.run();
 
         LinkedListChallenges.run();
     }
