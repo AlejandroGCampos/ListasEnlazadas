@@ -113,8 +113,20 @@ public class DoublyLinkedList<T> {
      * @return indice desde tail o -1 si no existe
      */
     public int indexFromTail(T value) {
-        throw new UnsupportedOperationException(
-                "TODO RETO: Implementar indexFromTail(T value) en DoublyLinkedList.");
+    	DoublyNode <T> current = tail;
+    	int index = 0;
+    	
+    	while(current != null) {
+    		if (isSameValue(current.getValue(), value)) {
+    			return index;
+    		}
+    		
+    		current = current.getPrevious();
+    		index++;
+    		
+    	}
+    	
+    	return -1;
     }
 
     public String toForwardString() {
