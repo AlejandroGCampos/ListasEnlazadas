@@ -95,8 +95,17 @@ public class DoublyLinkedList<T> {
      * @return cantidad de ocurrencias
      */
     public int countOccurrences(T value) {
-        throw new UnsupportedOperationException(
-                "TODO RETO: Implementar countOccurrences(T value) en DoublyLinkedList.");
+    	int count = 0;
+        DoublyNode<T> current = head;
+
+        while (current != null) {
+            if (isSameValue(current.getValue(), value)) {
+                count++;
+            }
+            current = current.getNext();
+        }
+
+        return count;
     }
 
     /**
@@ -106,8 +115,6 @@ public class DoublyLinkedList<T> {
      * @return nodos eliminados
      */
     public int clean() {
-        throw new UnsupportedOperationException(
-                "TODO RETO: Implementar clean() en DoublyLinkedList.");
     }
 
     /**
