@@ -115,6 +115,14 @@ public class DoublyLinkedList<T> {
      * @return nodos eliminados
      */
     public int clean() {
+
+    	int total = this.size;
+    	
+    	while(!this.isEmpty()) {
+    		removeFirst();
+    	}
+    	
+    	return total;
     }
 
     /**
